@@ -22,7 +22,7 @@ const NavBar = () => {
   const [open, setOpen] = useState(false);
   const handleToggle = () => setOpen(!open);
   return (
-    <nav className="h-[70px] flex flex-col items-center justify-center bg-background-light z40">
+    <nav className="h-[70px] flex flex-col items-center justify-center z-40">
       <div className="container">
         {/* FLEX */}
         <div className="flex justify-between items-center relative">
@@ -54,20 +54,27 @@ const NavBar = () => {
           </div>
           {/* MOBILE SCREEN */}
           {open && (
-            <div className="absolute -bottom-[280px] right-5 flex flex-col uppercase md:hidden bg-background-blueLight rounded-md">
-              {NAV_LINKS.map((item, index) => (
-                <Link
-                  key={index}
-                  href={item.href}
-                  className={`relative text-text-primary flex flex-col text-[13px] px-4 py-3 hover:bg-background-orange hover:text-white transition-all ${
-                    pathName == item.href
-                      ? "bg-background-orange text-white"
-                      : ""
-                  }`}
-                >
-                  {item.title}
-                </Link>
-              ))}
+            <div className="absolute -bottom-[320px] right-3 flex flex-col uppercase md:hidden bg-background-blueLight rounded-md">
+              <div className="flex flex-col">
+                {NAV_LINKS.map((item, index) => (
+                  <Link
+                    key={index}
+                    href={item.href}
+                    className={`relative text-text-primary flex flex-col text-[13px] px-4 py-3 hover:bg-background-orange hover:text-white transition-all ${
+                      pathName == item.href
+                        ? "bg-background-orange text-white"
+                        : ""
+                    }`}
+                  >
+                    {item.title}
+                  </Link>
+                ))}
+              </div>
+              {/* PHONE NUMBER */}
+              <div className="flex gap-2 items-center text-primary-orange text-[13px] px-4 py-2 border-t">
+                <FaPhoneAlt />
+                <span>+111 - 0258211</span>
+              </div>
             </div>
           )}
           {/* MENU TOGGER */}
