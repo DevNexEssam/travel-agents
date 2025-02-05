@@ -10,11 +10,11 @@ import { HiMenuAlt3 } from "react-icons/hi";
 
 const NAV_LINKS = [
   { title: "home", href: "/" },
-  { title: "about", href: "/about" },
-  { title: "tour packages", href: "/packages" },
-  { title: "our services", href: "/services" },
-  { title: "gallery", href: "/gallery" },
-  { title: "contact", href: "/contact" },
+  { title: "about", href: "#about us" },
+  { title: "tour packages", href: "#packages" },
+  { title: "our services", href: "#services" },
+  { title: "gallery", href: "#gallery" },
+  { title: "contact", href: "#contact" },
 ];
 
 const NavBar = () => {
@@ -58,6 +58,7 @@ const NavBar = () => {
               <div className="flex flex-col">
                 {NAV_LINKS.map((item, index) => (
                   <Link
+                  onClick={!handleToggle}
                     key={index}
                     href={item.href}
                     className={`relative text-text-primary flex flex-col text-[13px] px-4 py-3 hover:bg-background-orange hover:text-white transition-all ${
