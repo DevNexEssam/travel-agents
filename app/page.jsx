@@ -1,4 +1,5 @@
 import AboutUs from "@components/sections/AboutUs";
+import Destination from "@components/sections/Destination";
 import Hero from "@components/sections/Hero";
 
 export default function Home() {
@@ -6,6 +7,7 @@ export default function Home() {
     <>
     <Hero />
     <AboutUs />
+    <Destination />
     </>
   );
 }
