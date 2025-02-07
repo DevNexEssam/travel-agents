@@ -3,7 +3,7 @@ import { FaStar } from "react-icons/fa6";
 
 const CardReviews = ({comment , name}) => {
   return (
-    <div className="bg-white px-6 py-4 rounded-[15px] flex flex-col gap-5 border-b border-transparent hover:scale-125 hover:border-primary-orange transition-all">
+    <div className="bg-white px-6 py-4 rounded-[15px] flex flex-col gap-5 border-b border-transparent hover:border-primary-orange transition-all">
       <p className="text-[13px] text-text-gray line-clamp-3">
         {comment}
       </p>
