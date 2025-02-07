@@ -8,7 +8,7 @@ export default function TravelSearch() {
 
   return (
     <div className="bg-white rounded-md p-4 border">
-      <div className="flex flex-col md:flex-row items-center gap-10">
+      <div className="flex flex-wrap items-center gap-10">
         {/* From Location */}
         <div className=" bg-white rounded-full border border-primary-orange px-2 py-3 flex items-center gap-2">
           <IoLocationOutline className=" h-4 w-4" />
